@@ -5,13 +5,10 @@ export class NewsItem extends Component {
     let { title, description, imageUrl, newsUrl } = this.props;
     return (
       <div className="my-3">
-        <div className="card" style={{ width: "18rem" }}>
+        <div className="card">
           <img
-            src={imageUrl}
+            src={imageUrl?imageUrl:"https://images.unsplash.com/photo-1504711434969-e33886168f5c"}
             alt="news"
-            onError={(e) => {
-              e.target.src = "https://images.unsplash.com/photo-1504711434969-e33886168f5c";
-            }}
           />
           <div className="card-body">
             <h5 className="card-title">{title}...</h5>
